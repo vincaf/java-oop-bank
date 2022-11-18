@@ -33,15 +33,15 @@ public class Conto {
 	
 	public void getMoney(int money) {
 		if ((saldo - money) < 0) 
-			System.out.println("non ci sono abbastanza soldi sul conto, saldo attuale: " + getSaldo() + "$");
+			System.out.println("Quantità richiesta superiore al proprio saldo, saldo attuale: " + getSaldo() + "$");
 		else 
-			saldo -= money;
+			System.out.println("Prelevati dal conto di " + getNomeProprietario() + ": " + (saldo -= money) + "€");
 	}
 	
 	@Override
 	public String toString() {
-		return "nome proprietario: " + getNomeProprietario() 
-				+ "\nnumero conto: " + getNumeroConto() 
-				+ "\nsaldo: " + getSaldo() + "$";
+		return "Nome proprietario: " + getNomeProprietario() 
+				+ "\nNumero conto: " + getNumeroConto() 
+				+ "\nSaldo: " + getSaldo() + "€";
 	}
 }
