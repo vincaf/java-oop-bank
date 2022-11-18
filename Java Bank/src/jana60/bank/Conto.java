@@ -31,11 +31,13 @@ public class Conto {
 		saldo += money;
 	}
 	
-	public void getMoney(int money) {
-		if ((saldo - money) < 0) 
-			System.out.println("Quantità richiesta superiore al proprio saldo, saldo attuale: " + getSaldo() + "$");
-		else 
-			System.out.println("Prelevati dal conto di " + getNomeProprietario() + ": " + (saldo -= money) + "€");
+	public boolean getMoney(int money) {
+		if (saldo < money) {
+			return false;
+		}
+		
+		saldo -= money;
+		return true;
 	}
 	
 	@Override

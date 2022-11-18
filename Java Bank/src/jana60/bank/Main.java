@@ -16,7 +16,8 @@ public class Main {
 		
 		System.out.println("\n----------\n");
 		
-		user1.getMoney(30);
+		boolean res = user1.getMoney(30);
+		System.out.println("risultato prelievo: " + res);
 		
 		System.out.println("\n----------\n");
 		
