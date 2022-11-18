@@ -8,7 +8,7 @@ public class Conto {
 	public Conto(int numeroConto, String nomeProprietario ) {
 		this.numeroConto = numeroConto;
 		this.nomeProprietario = nomeProprietario;
-		saldo = 0;
+		this.saldo = 0;
 	}
 	
 	public int getNumeroConto() {
